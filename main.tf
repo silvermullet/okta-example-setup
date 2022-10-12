@@ -2,9 +2,8 @@ resource "okta_app_saml" "eng_support_role" {
   preconfigured_app = "amazon_aws"
   label             = "Amazon AWS - Engineer Support Role"
   status            = "ACTIVE"
-  users {
-    id       = okta_user.zane_smith.id
-    username = okta_user.zane_smith.email
+  lifecycle {
+    ignore_changes = [users]
   }
 }
 
@@ -12,9 +11,8 @@ resource "okta_app_saml" "eng_admin_role" {
   preconfigured_app = "amazon_aws"
   label             = "Amazon AWS - Admin Role"
   status            = "ACTIVE"
-  users {
-    id       = okta_user.zane_smith.id
-    username = okta_user.zane_smith.email
+  lifecycle {
+    ignore_changes = [users]
   }
 }
 
