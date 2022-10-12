@@ -3,8 +3,8 @@ resource "okta_app_saml" "eng_support_role" {
   label             = "Amazon AWS - Engineer Support Role"
   status            = "ACTIVE"
   users {
-    id       = okta_user.zane.id
-    username = okta_user.zane.email
+    id       = okta_user.zane_smith.id
+    username = okta_user.zane_smith.email
   }
 }
 
@@ -13,8 +13,8 @@ resource "okta_app_saml" "eng_admin_role" {
   label             = "Amazon AWS - Admin Role"
   status            = "ACTIVE"
   users {
-    id       = okta_user.zane.id
-    username = okta_user.zane.email
+    id       = okta_user.zane_smith.id
+    username = okta_user.zane_smith.email
   }
 }
 
