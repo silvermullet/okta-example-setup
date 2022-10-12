@@ -1,7 +1,7 @@
 # okta-example-setup
 Example Okta App, Users, and IAM role setup
 
-# Terraform Workspace env variables
+### Terraform Workspace env variables
 OKTA_BASE_URL
 OKTA_API_TOKEN
 OKTA_ORG_NAME
