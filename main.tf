@@ -58,6 +58,6 @@ module "iam_assumable_role_eng_admin" {
 
   // Engineer Admin Role
   role_policy_arns = [
-    "arn:aws:iam::aws:policy/Administrator",
+    "arn:aws:iam::aws:policy/AdministratorAccess",
   ]
 }
