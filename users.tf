@@ -31,12 +31,12 @@ resource "okta_user" "zane_smith" {
 
 resource "okta_app_user" "zane_smith_aws_eng_support" {
   app_id   = okta_app_saml.eng_support_role.id
-  user_id  = okta_app_user.zane_smith.id
+  user_id  = okta_user.zane_smith.id
   username = "Zane Smith"
 }
 
 resource "okta_app_user" "zane_smith_aws_admin_support" {
   app_id   = okta_app_saml.eng_admin_role.id
-  user_id  = okta_app_user.zane_smith.id
+  user_id  = okta_user.zane_smith.id
   username = "Zane Smith"
 }
