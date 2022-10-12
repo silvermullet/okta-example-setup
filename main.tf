@@ -2,12 +2,14 @@ resource "okta_app_saml" "eng_support_role" {
   preconfigured_app = "amazon_aws"
   label             = "Amazon AWS - Engineer Support Role"
   status            = "ACTIVE"
+  skip_users        = true
 }
 
 resource "okta_app_saml" "eng_admin_role" {
   preconfigured_app = "amazon_aws"
   label             = "Amazon AWS - Admin Role"
   status            = "ACTIVE"
+  skip_users        = true
 }
 
 resource "aws_iam_saml_provider" "idp_eng_support_saml" {
